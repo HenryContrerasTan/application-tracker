@@ -1,0 +1,17 @@
+:root { font-family: system-ui, sans-serif; color: #1a1a1a; background: #f6f6f4; }
+body { margin: 0; }
+main { max-width: 820px; margin: 0 auto; padding: 1.5rem; }
+h1 { margin-bottom: 0.25rem; }
+.subtitle { color: #555; margin-top: 0; }
+.card { background: #fff; border: 1px solid #ddd; border-radius: 10px; padding: 1rem; margin: 1rem 0; }
+form, .filters { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0.75rem; }
+label { display: grid; gap: 0.25rem; font-size: 0.9rem; }
+.wide { grid-column: 1 / -1; }
+input, select, textarea, button { padding: 0.5rem; border: 1px solid #bbb; border-radius: 6px; font: inherit; }
+button { background: #1f4e79; color: #fff; border: none; cursor: pointer; }
+button:hover { background: #163a5c; }
+#list { list-style: none; padding: 0; display: grid; gap: 0.75rem; }
+.app-card { background: #fff; border: 1px solid #ddd; border-radius: 10px; padding: 1rem; }
+.tag { display: inline-block; background: #eef3f8; border-radius: 999px; padding: 0.15rem 0.6rem; margin-left: 0.4rem; font-size: 0.8rem; }
+.meta { color: #555; font-size: 0.9rem; margin-top: 0.25rem; }
+.row-actions { display: flex; gap: 1rem; align-items: end; margin-top: 0.75rem; }

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Application Tracker</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main>
+  <h1>Application Tracker</h1>
+  <p class="subtitle">Track full-time and internship applications. Data is saved in a local SQLite database.</p>
+
+  <section class="card" aria-label="Add application">
+    <h2>Add an application</h2>
+    <form id="add-form">
+      <label>Company <input name="company" required></label>
+      <label>Role <input name="role" required></label>
+      <label>Type
+        <select name="type">
+          <option>Full-time</option>
+          <option>Internship</option>
+        </select>
+      </label>
+      <label>Status
+        <select name="status">
+          <option>Saved</option>
+          <option>Applied</option>
+          <option>Interview</option>
+          <option>Offer</option>
+          <option>Rejected</option>
+        </select>
+      </label>
+      <label>Location <input name="location" placeholder="Remote, New York, NY…"></label>
+      <label>Date applied <input type="date" name="date_applied"></label>
+      <label>Link <input name="link" type="url" placeholder="https://…"></label>
+      <label class="wide">Notes <textarea name="notes" rows="2"></textarea></label>
+      <button type="submit" class="wide">Add application</button>
+    </form>
+    <p id="form-message" role="status"></p>
+  </section>
+
+  <section class="card" aria-label="Search and filter">
+    <h2>Search &amp; filter</h2>
+    <div class="filters">
+      <label>Search <input id="search" placeholder="Company, role, or notes…"></label>
+      <label>Status
+        <select id="filter-status">
+          <option value="">All statuses</option>
+          <option>Saved</option>
+          <option>Applied</option>
+          <option>Interview</option>
+          <option>Offer</option>
+          <option>Rejected</option>
+        </select>
+      </label>
+      <label>Type
+        <select id="filter-type">
+          <option value="">All types</option>
+          <option>Full-time</option>
+          <option>Internship</option>
+        </select>
+      </label>
+      <button id="clear-filters" type="button">Clear</button>
+    </div>
+    <p id="stats" role="status"></p>
+  </section>
+
+  <section aria-label="Applications">
+    <h2>Applications</h2>
+    <p id="empty" hidden>No applications yet. Add your first one above.</p>
+    <ul id="list"></ul>
+  </section>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
